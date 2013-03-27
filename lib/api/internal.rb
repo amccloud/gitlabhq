@@ -25,6 +25,7 @@ module Gitlab
 
 
         if key.is_deploy_key
+          return true
           project == key.project && git_cmd == 'git-upload-pack'
         else
           user = key.user
